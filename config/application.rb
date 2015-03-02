@@ -20,8 +20,7 @@ module InviteMe
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # For Foundation 5
-    config.assets.precompile += %w( vendor/modernizr )
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
