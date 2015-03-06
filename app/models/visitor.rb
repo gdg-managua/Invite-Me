@@ -12,7 +12,7 @@ class Visitor
     # gibbon busca la var automaticamente
     mailchimp = Gibbon::API.new
     result = mailchimp.lists.subscribe({
-      :id => Rails.application.secrets.MAILCHIMP_LIST_ID,
+      :id => Rails.application.secrets.mailchimp_list_id,
       :email => {:email => self.email},
       :merge_vars => {
         'FNAME' => f_name,
