@@ -15,8 +15,8 @@ class Visitor
       :id => Rails.application.secrets.mailchimp_list_id,
       :email => {:email => self.email},
       :merge_vars => {
-        'FNAME' => f_name,
-        'LNAME' => l_name
+        'FNAME' => self.f_name,
+        'LNAME' => self.l_name
       },
       :double_optin => false,
       :update_existing => true,
