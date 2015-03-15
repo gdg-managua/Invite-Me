@@ -1,4 +1,4 @@
-class Place
+class Place < ActiveRecord::Base
   include ActiveModel::Model
   attr_accessor :name, :string
   attr_accessor :coordinates, :string
