@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312041136) do
+ActiveRecord::Schema.define(version: 20150315211543) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -45,5 +45,44 @@ ActiveRecord::Schema.define(version: 20150312041136) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "chapters", force: :cascade do |t|
+    t.integer  "number"
+    t.datetime "date"
+    t.integer  "speaker_id"
+    t.integer  "talk_id"
+    t.integer  "place_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "chapters", ["place_id"], name: "index_chapters_on_place_id"
+  add_index "chapters", ["speaker_id"], name: "index_chapters_on_speaker_id"
+  add_index "chapters", ["talk_id"], name: "index_chapters_on_talk_id"
+
+  create_table "places", force: :cascade do |t|
+    t.string   "name"
+    t.string   "coordinates"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "speakers", force: :cascade do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "talks", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "speaker_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "talks", ["speaker_id"], name: "index_talks_on_speaker_id"
 
 end
