@@ -3,8 +3,6 @@ $(document).ready(function() {
 });
 
 function init_map() {
-  console.log(gon.latitud);
-  console.log(gon.longitud);
   var var_location = new google.maps.LatLng(gon.latitud,gon.longitud);
 
   var var_mapoptions = {
