@@ -54,30 +54,47 @@
       <div class="col-md-12">
         <h3>Speakers</h3>
         <div class="list-group">
-          <div class="list-group-item">
-              <div class="row-picture">
-                  <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
-              </div>
-              <div class="row-content">
-                  <h4 class="list-group-item-heading">Tile with avatar</h4>
-                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus</p>
-              </div>
-          </div>
-          <div class="list-group-separator"></div>
-          <div class="list-group-item">
-              <div class="row-picture">
-                  <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
-              </div>
-              <div class="row-content">
-                  <h4 class="list-group-item-heading">Tile with another avatar</h4>
-                  <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
-              </div>
-          </div>
-          <div class="list-group-separator"></div>
+              <% @speakers.each do |speaker| %>
+                <div class="list-group-item">
+                  <div class="row-picture">
+                    <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                  </div>
+                  <div class="row-content">
+                    <h4 class="list-group-item-heading"><%= speaker.name %></h4>
+                    <p class="list-group-item-text"><%= speaker.bio %></p>
+                  </div>
+                </div>
+                 <div class="list-group-separator"></div>
+              <% end %>          
         </div>
       </div>
     </div>
   </div>
+</section>
+
+<section>
+<div class="container jumbotron">
+  <div class="row">
+    <div class="col-md-12"></div>
+    <h3>Charlas</h3>
+    <div class="list-group">
+      
+      <% @talks.each do |talk| %>
+        <div class="list-group-item">
+          <div class="row-picture">
+            <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon  ">
+          </div>
+          <div class="row-content">
+            <h4 class="list-group-item-heading"><%= talk.title %></h4>
+            <p class="list-group-item-text"><%= talk.description %></p>
+          </div>
+        </div>
+        <div class="list-group-separator"></div>
+      <% end %>  
+
+    </div>
+  </div>
+</div>
 </section>
 
 <section>

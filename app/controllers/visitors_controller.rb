@@ -2,6 +2,8 @@ class VisitorsController < ApplicationController
 
   def new
     @visitor = Visitor.new
+    @speakers = Speaker.all
+    @talks = Talk.all
   end
 
   def create
