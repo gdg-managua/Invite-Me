@@ -3,7 +3,9 @@ $(document).ready(function() {
 });
 
 function init_map() {
-  var var_location = new google.maps.LatLng(12.1251934,-86.2720621);
+  console.log(gon.latitud);
+  console.log(gon.longitud);
+  var var_location = new google.maps.LatLng(gon.latitud,gon.longitud);
 
   var var_mapoptions = {
     center: var_location,
@@ -23,3 +25,4 @@ function init_map() {
 }
 
 google.maps.event.addDomListener(window, 'load', init_map);
+

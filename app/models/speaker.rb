@@ -1,4 +1,4 @@
 class Speaker < ActiveRecord::Base
-  belongs_to :talk
+  has_many :talks, dependent: :destroy
   belongs_to :chapter
 end 

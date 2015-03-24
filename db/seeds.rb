@@ -14,15 +14,24 @@ speakers_list = [
 
 talks_list = [
 	["Android","Let's talk about human robots",1],
-	["Apple","Fancy stuff",2],
-	["App Engine","Yeah this is google tech",3]
+	["Apple","Fancy stuff",1],
+	["App Engine","Yeah this is google tech",2]
 ]
 
-speakers_list.each do |name, bio|
-  Speaker.create( name: name, bio: bio )
+place_list = [
+	["Ajuapa",12.1251934,-86.2720621,"Umm descripción"],
+	["Managua",12.1251934,-86.2720621,"Alguna descripción"]
+]
+speakers_list.each do | name, bio|
+  Speaker.create(name: name, bio: bio )
 end
 
 talks_list.each do |title,desc,id|
 	Talk.create(title: title, description: desc,speaker_id: id)
 end
+
+place_list.each do |name,latitud,longitud,desc|
+	Place.create(name: name, latitud: latitud,longitud: longitud,description: desc)
+end
+
 

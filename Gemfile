@@ -10,6 +10,7 @@ gem 'paperclip'
 gem 'jbuilder', '~> 2.0'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'devise', '~> 3.4.1'
+gem 'gon'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

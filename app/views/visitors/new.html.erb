@@ -4,12 +4,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Hola, si llegaste aqui es por que deseas asistir a la # reunion del GDG Managua</h2>
+        <h2>Hola, si llegaste aqui es por que deseas asistir a la # reunion del GDG Managua </h2>
       </div>
     </div>
   </div>
 </section>
-
 <section>
   <div class="container">
     <div class="row">
@@ -85,7 +84,7 @@
             <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon  ">
           </div>
           <div class="row-content">
-            <h4 class="list-group-item-heading"><%= talk.title %></h4>
+            <h4 class="list-group-item-heading"><%= talk.title %> by <%= talk.speaker.name %></h4>
             <p class="list-group-item-text"><%= talk.description %></p>
           </div>
         </div>
@@ -101,7 +100,8 @@
   <div class="container jumbotron">
     <div class="row">
       <div class="col-md-12">
-        <h3>Place</h3>
+        <h3>Place: <%= @last_place.name %> </h3>
+        <h4><%= @last_place.description %></h4>
         <div id="map-container" style="width:auto; height: 400px;"></div>
       </div>
     </div>
