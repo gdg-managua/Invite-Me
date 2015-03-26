@@ -1,7 +1,7 @@
 <% content_for :title do %>GDG Managua<% end %>
 <% content_for :description do %>GDG Managua # Event<% end %>
 <section class="header-section">
-  <div class="container-fluid">
+  <div>
     <%= image_tag("background-material.png", :alt => "background", :class => "img-responsive") %>
     <div class="hello">
       <span>Hola, gracias por visitarnos!</span>
@@ -64,8 +64,8 @@
                 <%= image_tag("gdg-icon.jpg", :alt => "gdg-icon") %>
               </div>
               <div class="row-content">
-                <h4 class="list-group-item-heading"><%= speaker.name %></h4>
-                <p class="list-group-item-text"><%= speaker.bio %></p>
+                <h4 class="list-group-item-heading primary-text-color"><%= speaker.name %></h4>
+                <p class="list-group-item-text secondary-text-color"><%= speaker.bio %></p>
               </div>
             </div>
              <div class="list-group-separator"></div>
@@ -81,7 +81,7 @@
   <div class="container jumbotron">
     <div class="row">
       <div class="col-md-12">
-        <h3>Charlas</h3>
+        <h3>Talks</h3>
         <div class="list-group">
           
           <% @talks.each do |talk| %>
@@ -90,8 +90,8 @@
                 <%= image_tag("gdg-icon.jpg", :alt => "gdg-icon") %>
               </div>
               <div class="row-content">
-                <h4 class="list-group-item-heading"><%= talk.title %> by <%= talk.speaker.name %></h4>
-                <p class="list-group-item-text"><%= talk.description %></p>
+                <h4 class="list-group-item-heading primary-text-color"><%= talk.title %> by <%= talk.speaker.name %></h4>
+                <p class="list-group-item-text secondary-text-color"><%= talk.description %></p>
               </div>
             </div>
             <div class="list-group-separator"></div>

@@ -13,7 +13,7 @@
     <%= csrf_meta_tags %>
 
   </head>
-  <body>
+  <body class="light-primary-color">
     <header>
       <%= render 'layouts/navigation' %>
     </header>
@@ -21,13 +21,11 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
-    <footer>
-      <div class="container-fluid container-material-indigo-A400">
+    <footer class="default-primary-color">
+      <div class="container text-primary-color">
         <div class="row">
           <div class="col-md-12">
-            <span>GDG Managua - Reservado todos los derechos 2015 - </span>
-            <span>Construido con amor en Nicaragua</span>
-            <!--<a class="btn btn-fab btn-fab-mini btn-raised btn-sm btn-success pull-right" href="#main"><i class="mdi-navigation-check"></i></a>-->
+            <span>GDG Managua - Reservado todos los derechos 2015</span>
           </div>
         </div>
       </div>
