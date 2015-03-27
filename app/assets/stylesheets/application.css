@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Material-Design-Icons";
+  src: url("../fonts/Material-Design-Icons.eot");
+  /*src: url("/app/assets/fonts/Material-Design-Icons.eot?#iefix-g7cqhn");*/
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Color Pallete */
 .dark-primary-color    { background-color: #512DA8 !important; }
 .default-primary-color { background-color: #673AB7 !important; }
