@@ -4,7 +4,7 @@ class VisitorsController < ApplicationController
     @visitor = Visitor.new
     @speakers = Speaker.all
     @talks = Talk.all
-    @last_place =Place.last
+    @last_place = Place.last
     gon.latitud = @last_place.latitud
     gon.longitud = @last_place.longitud
   end
